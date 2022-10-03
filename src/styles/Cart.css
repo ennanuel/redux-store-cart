@@ -1,0 +1,150 @@
+.cart-container {
+  padding: 30px;
+}
+
+.cart-container .cart {
+  border: 1px solid black;
+  padding: 40px;
+}
+
+.cart-container .cart ul {
+  list-style: none;
+  color: white;
+  padding: 0;
+}
+
+.cart-container .cart ul .list {
+  background-color: purple;
+  width: 100%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 10px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.cart-container .cart ul .list .line {
+  max-width: 0;
+  height: 40px;
+  border: 1px solid;
+  border-color: transparent white transparent transparent;
+}
+
+.cart-container .cart ul .list .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 100px;
+  text-align: center;
+}
+
+.cart-container .cart ul .list .buttons p {
+  min-width: 20px !important;
+}
+
+.cart-container .cart ul .list .buttons button {
+  background-color: black;
+  color: white;
+  border: 0px;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.cart-container .cart ul .list .buttons button:hover {
+  background-color: #171717;
+}
+
+.cart-container .cart ul .list .buttons button:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.cart-container .cart ul .list #delete {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background-color: #310231;
+  color: #e896e1;
+  text-align: center;
+  font-size: 20px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.cart-container .cart ul .list #delete::after {
+  width: 15px;
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 4px;
+  border-top: 3px solid;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.cart-container .cart ul .list #delete::before {
+  width: 15px;
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 4px;
+  border-top: 3px solid;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.cart-container .cart ul .list #delete:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #ffafaf;
+  background-color: #b40036;
+}
+
+.cart-container .cart ul .list #delete:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.cart-container .cart ul .list:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.cart-container .cart h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  min-width: 200px;
+}
+
+.cart-container .cart p {
+  width: 100px;
+  text-align: center;
+}
+/*# sourceMappingURL=Cart.css.map */
