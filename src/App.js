@@ -13,18 +13,12 @@ function App() {
   const dispatch = useDispatch();
   const cart = useSelector( state => state.cart );
   //const apiUrl = 'https://cart-project-4ee01-default-rtdb.firebaseio.com/cartItems.json';
-
-  useEffect( () => {
-
-    if(!cart.changed) return;
-    dispatch(fetchCartData());
-
-  }, [cart, dispatch])
-
+  
   useEffect( () => {
 
     if(!cart.changed) return;
     dispatch(sendCartData(cart))
+    dispatch(fetchCartData())
 
     /*const sendRequest = async () => {
 

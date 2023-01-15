@@ -10,7 +10,7 @@ const Products = () => {
     const cartItems = useSelector( state => state.cart.itemsList );
     const showCart = useSelector( state => state.cart.showCart );
     const quantity = useSelector( state => state.cart.totalQuantity );
-    const totalPrice = cartItems.reduce((total, elem) => total + (elem.price * elem.quantity), 0);
+    const totalPrice = cartItems?.reduce((total, elem) => total + (elem.price * elem.quantity), 0);
     const dispatch = useDispatch();
 
     const toggleCart = () => {

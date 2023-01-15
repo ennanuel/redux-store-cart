@@ -12,7 +12,7 @@ export const fetchCartData = () => {
         )
 
         const fetchRequest = async () => {
-            const res = await fetch('https://cart-project-4ee01-default-rtdb.firebaseio.com/cartItems.json');
+            const res = await fetch('https://cart-project-4ee01-default-rtdb.firebaseio.com');
             const data = await res.json;
             return data;
         }

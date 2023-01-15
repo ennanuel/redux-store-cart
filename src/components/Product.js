@@ -3,7 +3,7 @@ import { cartActions } from '../store/cart-slice';
 
 const Product = ({ id, name, price, imageUrl}) => {
     const dispatch = useDispatch();
-    const handleClick = (e) => {
+    const handleClick = () => {
         dispatch(cartActions.addToCart({
             name,
             id,
