@@ -12,6 +12,10 @@ const cartSlice = createSlice({
         setCart(state, action) {
             state.itemsList = action.payload.itemsList;
             state.totalQuantity = action.payload.totalQuantity;
+            state.changed = action.payload.changed;
+        },
+        setChanged(state, action) {
+            state.changed = action.payload
         },
         addToCart(state, action) {
             const newItem = action.payload;

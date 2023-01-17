@@ -73,11 +73,20 @@
           box-shadow: 0 0 3px grey;
   position: relative;
   top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .product-grid .product .prod-image {
   width: 100%;
-  height: 90px;
   border: 1px solid #c3c1c1;
   margin: 0 auto;
   overflow: hidden;
@@ -85,6 +94,8 @@
 
 .product-grid .product .prod-image .image {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .product-grid .product .prod-title, .product-grid .product .prod-price {

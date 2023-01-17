@@ -12,9 +12,14 @@ export const fetchCartData = () => {
         )
 
         const fetchRequest = async () => {
-            const res = await fetch('https://cart-project-4ee01-default-rtdb.firebaseio.com');
-            const data = await res.json;
-            return data;
+            try {
+                const res = await fetch('https://cart-project-4ee01-default-rtdb.firebaseio.com/cartItems.json')
+                const data = await res.json();
+                return data;
+            } 
+            catch (err) {
+                console.log(err)
+            }
         }
 
         try {
@@ -24,6 +29,11 @@ export const fetchCartData = () => {
                 cartActions.setCart(dat)
             )
 
+            dispatch(
+                cartActions.setChanged(false)
+            )
+
+            console.log(dat, typeof(dat))
             dispatch(
                 uiActions.showNotification({
                     open: true,
@@ -62,6 +72,8 @@ export const sendCartData = (cart) => {
             });
             
             await res.json();
+
+            dispatch(cartActions.setChanged(false))
 
             dispatch(uiActions.showNotification({
                 open: true,

@@ -15,8 +15,10 @@ const Product = ({ id, name, price, imageUrl}) => {
         <div className="prod-image">
             <img src={imageUrl} alt={name} className="image" />
         </div>
-        <p className="prod-title">{name}</p>
-        <p className="prod-price">${price}</p>
+        <div className="info">
+            <p className="prod-title">{name}</p>
+            <p className="prod-price">${price}</p>
+        </div>
         <button className="btn" id="add-to-cart" onClick={handleClick}>Add to Cart</button>
     </div>
 }
