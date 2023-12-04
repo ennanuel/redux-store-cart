@@ -1,45 +1,37 @@
 #login {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100%;
 }
-
+#login p {
+  color: white;
+}
 #login .form {
   margin: auto;
   width: 300px;
   padding: 50px;
   border-radius: 3px;
-  background-color: #460246;
-  -webkit-box-shadow: 6px 6px 7px grey;
-          box-shadow: 6px 6px 7px grey;
+  background-color: rgb(70, 2, 70);
+  box-shadow: 6px 6px 7px grey;
   position: relative;
   top: 0;
   text-align: center;
 }
-
 #login .form .label {
   color: white;
   display: block;
   margin-bottom: 5px;
 }
-
 #login .form .form-title {
   color: white;
   margin: 0;
   text-align: center;
   margin-bottom: 20px;
 }
-
 #login .form #login-btn {
-  background-color: #230023;
+  background-color: rgb(35, 0, 35);
   width: 60% !important;
   height: 30px !important;
   padding: 0 !important;
@@ -47,27 +39,21 @@
   color: white;
   margin: 0 !important;
 }
-
 #login .form #login-btn:hover {
   background-color: purple;
   border-color: purple;
 }
-
 #login .form .form-input {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   max-width: 80%;
   padding-left: 15px;
   margin-bottom: 25px;
-  border: 1px solid #220122;
+  border: 1px solid rgb(34, 1, 34);
   border-radius: 0;
   width: 100%;
   height: 40px;
 }
-
 #login .form:hover {
   top: -3px;
-  -webkit-box-shadow: 6px 9px 12px grey;
-          box-shadow: 6px 9px 12px grey;
-}
-/*# sourceMappingURL=Login.css.map */
+  box-shadow: 6px 9px 12px grey;
+}/*# sourceMappingURL=Login.css.map */
