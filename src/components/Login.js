@@ -12,6 +12,7 @@ const Login = () => {
     return <div id="login">
         <form className="form" onSubmit={ handleSubmit }>
             <h1 className="form-title">Log In</h1>
+            <p>Using any id or password will be just fine.</p>
             <label htmlFor="id" className="label">id</label>
             <input type="text" className="form-input" id="id" placeholder="Email Address" />
             <label htmlFor="pword" className="label">password</label>
