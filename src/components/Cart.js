@@ -7,9 +7,9 @@ const Cart = () => {
 
     return <div className="cart-container">
         <div className="cart">
-            <h2>Your Cart{ !cartItems.length && ' is empty' }</h2>
+            <h2>Your Cart { cartItems?.length < 1 && 'is empty' }</h2>
             <ul>
-                {cartItems.map(
+                {cartItems?.map(
                     (elem, i) => <li key={elem.id}><CartItem id={elem.id} name={elem.name} price={elem.price} quantity={elem.quantity} /></li>
                 )}
             </ul>
