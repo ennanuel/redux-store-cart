@@ -19,40 +19,43 @@ const cartSlice = createSlice({
         },
         addToCart(state, action) {
             const newItem = action.payload;
-            const existingItem = state.itemsList.find(elem => elem.id === newItem.id);
+            const itemsList = state.itemsList || [];
+            const existingItem = itemsList.find(elem => elem.id === newItem.id);
             state.changed = true;
-
             if(existingItem) {
-                existingItem.quantity++;
-
+                existingItem.quantity += 1;
             } else {
-                state.itemsList.push({
+                const newCartItem = {
                     id: newItem.id,
                     name: newItem.name,
                     price: newItem.price,
                     quantity: 1,
                     totalPrice: newItem.price
-                });
-                state.totalQuantity++
+                }
+                state.itemsList = [...itemsList, newCartItem];
+                state.totalQuantity += 1;
             }
         },
         removeFromCart(state, action) {
-            const itemFound = state.itemsList.find( item => item.id === action.payload );
-            const oldItems = state.itemsList;
-
-            state.itemsList = oldItems.filter(elem => elem.id !== itemFound.id);
-            state.totalQuantity --;
+            const itemsList = state.itemsList || [];
+            const itemFound = itemsList.find( item => item.id === action.payload );
+            state.itemsList = itemsList.filter(elem => elem.id !== itemFound.id);
+            state.totalQuantity -= 1;
             state.changed = true;
         },
         increaseQuantity(state, action) {
-            const itemFound = state.itemsList.find( item => item.id === action.payload);
-            
-            itemFound.quantity++;
+            const itemsList = state.itemsList || []
+            const itemIndex = itemsList.find( item => item.id === action.payload);
+            if (!itemIndex >= 0) return;
+            itemsList[itemIndex].quantity += 1;
+            state.itemsList = itemsList;
         },
         decreaseQuantity(state, action) {
-            const itemFound = state.itemsList.find( item => item.id === action.payload);
-            
-            itemFound.quantity--;
+            const itemsList = state.itemsList || []
+            const itemIndex = itemsList.find( item => item.id === action.payload);
+            if (!itemIndex >= 0) return;
+            itemsList[itemIndex].quantity -= 1;
+            state.itemsList = itemsList;
         },
         setShowCart(state) { state.showCart = !state.showCart }
     }
